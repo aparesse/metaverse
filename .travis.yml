@@ -20,13 +20,16 @@ matrix:
           sudo: required
           apt:
 
-        - os: linux
+		- os: linux
+		  dist: trusty
+		  sudo: required
           compiler: gcc
-          env: LINK=static
-          sudo: required
+		  services: docker
+		  env: DOCKER_IMAGE=ubuntu:16.04 LINK=static
           apt:
             packages:
                 - lcov
+
     fast_finish:
         - true
 
