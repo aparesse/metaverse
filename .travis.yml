@@ -50,6 +50,7 @@ script:
     # Download and build libbitcoin-network and all dependencies.
     # - sudo apt-get install openssl libssl-dev libgmp-dev
     # - sudo apt-get install texinfo
+    - sudo apt-get install libboost-all-dev
     - if [[ $LINUX && $GCC   && $STATIC  ]]; then CC=$CC CXX=$CXX  ./install.sh --build-boost --build-dir=my-build --prefix=$TRAVIS_BUILD_DIR/my-prefix ; fi
     #- if [[ $LINUX && $GCC   && $DYNAMIC ]]; then CC=$CC CXX=$CXX sudo ./install.sh --disable-static --build-boost --prefix=$TRAVIS_BUILD_DIR/my-prefix CFLAGS='-Os -s' CXXFLAGS='-Os -s'; fi
 
